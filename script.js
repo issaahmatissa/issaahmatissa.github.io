@@ -245,17 +245,42 @@ form.addEventListener("submit", async (e) => {
     if (res.ok && String(data.success) === "true") {
       showStatus("ok", t("form.success"));
       form.reset();
+    } else if (/activat/i.test(data.message || "")) {
+      // Le formulaire n'a pas encore été activé par le propriétaire (email "Activate Form" de FormSubmit).
+      console.warn("FormSubmit :", data.message);
+      showStatus("error", t("form.activation"));
     } else {
       throw new Error(data.message || `HTTP ${res.status}`);
     }
   } catch (err) {
+    // Envoi en arrière-plan impossible (réseau, bloqueur…) : on passe par un envoi classique.
     console.warn("Envoi du formulaire :", err);
-    showStatus("error", t("form.error"));
+    nativeSubmit(payload);
+    return;
   } finally {
     sendBtn.disabled = false;
     sendBtn.textContent = t("form.send");
   }
 });
+
+function nativeSubmit(payload) {
+  const f = document.createElement("form");
+  f.method = "POST";
+  f.action = CONFIG.formEndpoint.replace("/ajax/", "/");
+  f.acceptCharset = "UTF-8";
+  const back = `${location.origin}${location.pathname}?lang=${lang}&sent=1#contact`;
+  Object.entries({ ...payload, _next: back }).forEach(([k, v]) => {
+    const i = document.createElement("input");
+    i.type = "hidden"; i.name = k; i.value = v;
+    f.appendChild(i);
+  });
+  document.body.appendChild(f);
+  f.submit();
+}
+
+/* Liens "Écrire via Gmail" : ouvre directement la rédaction d'un email (appli Gmail ou site web) */
+const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONFIG.email)}`;
+document.querySelectorAll(".js-gmail").forEach((a) => (a.href = gmailUrl));
 
 /* Copier l'adresse email */
 const copyBtn = document.getElementById("copyEmail");
@@ -278,6 +303,10 @@ copyBtn.addEventListener("click", async () => {
    ========================================================= */
 document.getElementById("year").textContent = new Date().getFullYear();
 applyLang(lang);
+if (new URLSearchParams(location.search).get("sent") === "1") {
+  showStatus("ok", t("form.success"));
+  history.replaceState(null, "", `${location.pathname}?lang=${lang}#contact`);
+}
 
 /* Animations d'apparition au défilement */
 const revealer = new IntersectionObserver(

@@ -4,6 +4,9 @@
    ========================================================= */
 const I18N = {
   fr: {
+    "form.activation": "Le formulaire est en cours d'activation. En attendant, écrivez-moi via Gmail ou WhatsApp ci-contre.",
+    "contact.gmail": "Écrire via Gmail",
+    "name": "ISSA AHMAT ISSA",
     "meta.title": "ISSA AHMAT ISSA — Étudiant en Génie Informatique",
     "meta.desc": "Portfolio de ISSA AHMAT ISSA, étudiant en 3e année de licence en Génie Informatique à l'INST d'Abéché (Tchad). Développement web, C/Python, MySQL, Linux, mobile.",
     "aria.theme": "Changer de thème",
@@ -129,6 +132,9 @@ const I18N = {
   },
 
   en: {
+    "form.activation": "The form is being activated. In the meantime, write to me via Gmail or WhatsApp.",
+    "contact.gmail": "Write via Gmail",
+    "name": "ISSA AHMAT ISSA",
     "meta.title": "ISSA AHMAT ISSA — Computer Engineering Student",
     "meta.desc": "Portfolio of ISSA AHMAT ISSA, third-year Computer Engineering student at INST Abéché (Chad). Web development, C/Python, MySQL, Linux, mobile.",
     "aria.theme": "Toggle theme",
@@ -254,8 +260,11 @@ const I18N = {
   },
 
   ar: {
-    "meta.title": "ISSA AHMAT ISSA — طالب هندسة الحاسوب",
-    "meta.desc": "معرض أعمال ISSA AHMAT ISSA، طالب في السنة الثالثة من الليسانس في هندسة الحاسوب بالمعهد الوطني للعلوم والتقنيات بأبشة (تشاد).",
+    "form.activation": "النموذج قيد التفعيل. في هذه الأثناء، راسلني عبر Gmail أو واتساب.",
+    "contact.gmail": "راسلني عبر Gmail",
+    "name": "عيسى أحمد عيسى",
+    "meta.title": "عيسى أحمد عيسى — طالب هندسة الحاسوب",
+    "meta.desc": "معرض أعمال عيسى أحمد عيسى، طالب في السنة الثالثة من الليسانس في هندسة الحاسوب بالمعهد الوطني للعلوم والتقنيات بأبشة (تشاد).",
     "aria.theme": "تغيير المظهر",
     "aria.menu": "فتح القائمة",
     "aria.scroll": "انتقل إلى الأسفل",
@@ -274,13 +283,13 @@ const I18N = {
     "hero.desc": "طالب في السنة الثالثة من الليسانس بالمعهد الوطني للعلوم والتقنيات بأبشة (تشاد). أصمّم تطبيقات الويب، وأبرمج بلغتي C وPython، وأحب حل المشكلات التقنية ضمن فريق.",
     "hero.contact": "تواصل معي",
     "hero.cv": "تحميل سيرتي الذاتية",
-    "hero.photoAlt": "صورة ISSA AHMAT ISSA",
+    "hero.photoAlt": "صورة عيسى أحمد عيسى",
     "hero.level": "ليسانس 3 · هندسة الحاسوب",
     "hero.school": "INST · أبشة",
     "hero.typed": ["مطوّر ويب", "مبرمج C / Python", "شغوف بنظام Linux", "مهندس برمجيات المستقبل"],
 
     "about.title": "نبذة عني",
-    "about.p1": "اسمي <strong>ISSA AHMAT ISSA</strong>، طالب تشادي من مدينة انجامينا، أدرس حالياً في <strong>السنة الثالثة من الليسانس في هندسة الحاسوب</strong> بالمعهد الوطني للعلوم والتقنيات بأبشة.",
+    "about.p1": "اسمي <strong>عيسى أحمد عيسى</strong>، طالب تشادي من مدينة انجامينا، أدرس حالياً في <strong>السنة الثالثة من الليسانس في هندسة الحاسوب</strong> بالمعهد الوطني للعلوم والتقنيات بأبشة.",
     "about.p2": "شغوف بالتكنولوجيا، واكتسبت مهارات متنوعة: البرمجة بلغتي <strong>C</strong> و<strong>Python</strong>، وتطوير الويب (<strong>HTML وCSS وJavaScript</strong>)، وقواعد بيانات <strong>MySQL</strong>، وأنظمة <strong>Windows وLinux</strong>، إضافة إلى برمجة تطبيقات الهاتف وصيانة الحواسيب.",
     "about.p3": "أحب العمل ضمن فريق لحل المشكلات التقنية الملموسة. أتحدث الفرنسية والعربية والإنجليزية، وأتكيّف بسهولة مع بيئات العمل المختلفة، وأبحث عن <strong>فرصة تدريب</strong> لأضع مهاراتي في خدمة مشاريع حقيقية.",
     "about.stat1": "ليسانس هندسة الحاسوب",

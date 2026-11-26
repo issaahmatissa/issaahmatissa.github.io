@@ -336,8 +336,9 @@ a.contact__item:hover { border-color: var(--accent); transform: translateX(6px);
 .lang-switch button:focus-visible, .icon-btn:focus-visible, .btn:focus-visible, .copy-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 /* ---------- Contact : copie, statut du formulaire ---------- */
+.contact__actions { display: flex; flex-wrap: wrap; gap: 8px; margin: -6px 0 18px; }
 .copy-btn {
-  margin: -6px 0 18px; padding: 6px 12px; border-radius: 8px; cursor: pointer; font: inherit; font-size: 0.82rem;
+  display: inline-block; padding: 6px 12px; border-radius: 8px; cursor: pointer; font: inherit; font-size: 0.82rem;
   background: transparent; color: var(--accent); border: 1px dashed color-mix(in srgb, var(--accent) 50%, transparent);
 }
 .copy-btn:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }

@@ -50,7 +50,7 @@
       <div class="container hero__inner">
         <div class="hero__text reveal">
           <p class="hero__badge"><span class="dot"></span> <span data-i18n="hero.badge">Disponible pour un stage</span></p>
-          <h1><span data-i18n="hero.hello">Bonjour, je suis</span><br /><span class="gradient">ISSA AHMAT ISSA</span></h1>
+          <h1><span data-i18n="hero.hello">Bonjour, je suis</span><br /><span class="gradient" data-i18n="name">ISSA AHMAT ISSA</span></h1>
           <p class="hero__role"><span data-i18n="hero.role">Étudiant en <strong>Génie Informatique</strong> —</span> <span id="typed" class="mono"></span><span class="caret">|</span></p>
           <p class="hero__desc" data-i18n="hero.desc">
             En 3<sup>e</sup> année de licence à l'Institut National des Sciences et Techniques d'Abéché (Tchad),
@@ -67,7 +67,7 @@
             <a href="#" class="js-github" aria-label="GitHub" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
             </a>
-            <a href="mailto:issaahmatissa0@gmail.com" aria-label="Email">
+            <a class="js-gmail" href="mailto:issaahmatissa0@gmail.com" target="_blank" rel="noopener" aria-label="Email">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
             </a>
             <a href="https://wa.me/23566026336" aria-label="WhatsApp" target="_blank" rel="noopener">
@@ -83,7 +83,7 @@
             </div>
             <figcaption class="portrait__tag">
               <span class="dot"></span>
-              <span><strong>ISSA AHMAT ISSA</strong><small data-i18n="hero.level">Licence 3 · Génie Informatique</small></span>
+              <span><strong data-i18n="name">ISSA AHMAT ISSA</strong><small data-i18n="hero.level">Licence 3 · Génie Informatique</small></span>
             </figcaption>
             <span class="portrait__chip portrait__chip--top mono">&lt;C / Python&gt;</span>
             <span class="portrait__chip portrait__chip--side mono" data-i18n="hero.school">INST · Abéché</span>
@@ -289,11 +289,14 @@
               Vous avez une offre de stage, un projet ou une simple question ?
               N'hésitez pas à me contacter, je vous répondrai rapidement.
             </p>
-            <a class="contact__item" href="mailto:issaahmatissa0@gmail.com">
+            <a class="contact__item js-gmail" href="mailto:issaahmatissa0@gmail.com" target="_blank" rel="noopener">
               <span class="contact__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
               <div><small data-i18n="contact.email">Email</small><strong dir="ltr" id="emailText">issaahmatissa0@gmail.com</strong></div>
             </a>
-            <button type="button" class="copy-btn" id="copyEmail" data-i18n="contact.copy">Copier l'adresse email</button>
+            <div class="contact__actions">
+              <a class="copy-btn js-gmail" href="mailto:issaahmatissa0@gmail.com" target="_blank" rel="noopener" data-i18n="contact.gmail">Écrire via Gmail</a>
+              <button type="button" class="copy-btn" id="copyEmail" data-i18n="contact.copy">Copier l'adresse email</button>
+            </div>
             <a class="contact__item" href="tel:+23566026336">
               <span class="contact__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
               <div><small data-i18n="contact.phone">Téléphone</small><strong dir="ltr">(+235) 66 02 63 36</strong></div>
@@ -337,7 +340,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> ISSA AHMAT ISSA. <span data-i18n="footer.made">Conçu et développé avec HTML, CSS &amp; JavaScript.</span></p>
+      <p>© <span id="year"></span> <span data-i18n="name">ISSA AHMAT ISSA</span>. <span data-i18n="footer.made">Conçu et développé avec HTML, CSS &amp; JavaScript.</span></p>
       <p class="footer__hobbies" data-i18n="footer.hobbies">Loisirs : football, sport, musique, voyage</p>
     </div>
   </footer>
