@@ -10,7 +10,8 @@ Site statique (HTML, CSS, JavaScript) : responsive, thème clair/sombre, animati
 portfolio/
 ├── index.html              # Contenu du site
 ├── style.css               # Design
-├── script.js               # Interactions + liste des projets (CONFIG / PROJECTS)
+├── i18n.js                 # Traductions FR / AR / EN
+├── script.js               # Interactions, formulaire, liste des projets (CONFIG / PROJECTS)
 └── assets/
     ├── photo.jpg               # Photo de profil
     └── CV-Issa-Ahmat-Issa.pdf  # CV téléchargeable
@@ -20,7 +21,15 @@ portfolio/
 
 1. **Nom GitHub** : déjà configuré (`issaahmatissa`) dans `script.js`.
 2. **Photo** : pour changer de photo, remplacez simplement le fichier `assets/photo.jpg` (format portrait 4:5 conseillé).
-3. **Projets** : ajoutez vos projets dans le tableau `PROJECTS` de `script.js`.
+3. **Projets** : ajoutez vos projets dans le tableau `PROJECTS` de `script.js` (texte en fr / en / ar).
+4. **Textes et traductions** : tous les textes du site sont dans `i18n.js`, dans les 3 langues.
+   Lien direct vers une langue : `?lang=fr`, `?lang=ar` ou `?lang=en` (ex. `https://issaahmatissa.github.io/?lang=ar`).
+
+## Formulaire de contact
+
+Les messages sont envoyés par le service gratuit [FormSubmit](https://formsubmit.co) vers `issaahmatissa0@gmail.com`.
+**À la toute première utilisation**, FormSubmit envoie un email « Activate Form » : cliquez sur le lien d'activation,
+sinon les messages ne seront pas transmis.
 
 ## Déployer sur GitHub Pages
 

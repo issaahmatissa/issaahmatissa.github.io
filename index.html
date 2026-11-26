@@ -3,35 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ISSA AHMAT ISSA — Étudiant en Génie Informatique</title>
-  <meta name="description" content="Portfolio de ISSA AHMAT ISSA, étudiant en 3e année de licence en Génie Informatique à l'INST d'Abéché (Tchad). Développement web, C/Python, MySQL, Linux, mobile." />
+  <title data-i18n="meta.title">ISSA AHMAT ISSA — Étudiant en Génie Informatique</title>
+  <meta name="description" data-i18n-content="meta.desc" content="Portfolio de ISSA AHMAT ISSA, étudiant en 3e année de licence en Génie Informatique à l'INST d'Abéché (Tchad). Développement web, C/Python, MySQL, Linux, mobile." />
   <meta property="og:title" content="ISSA AHMAT ISSA — Portfolio" />
   <meta property="og:description" content="Étudiant en Génie Informatique — Développement web, C/Python, bases de données, maintenance informatique." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23e8b04b'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='%230d1424'>IA</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- ========== NAVIGATION ========== -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="#accueil" class="nav__logo">&lt;<span>IssaAhmat</span> /&gt;</a>
+      <a href="#accueil" class="nav__logo" dir="ltr">&lt;<span>IssaAhmat</span> /&gt;</a>
       <nav class="nav__menu" id="navMenu">
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#parcours">Parcours</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
+        <a href="#apropos" data-i18n="nav.about">À propos</a>
+        <a href="#competences" data-i18n="nav.skills">Compétences</a>
+        <a href="#parcours" data-i18n="nav.education">Parcours</a>
+        <a href="#projets" data-i18n="nav.projects">Projets</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="nav__actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">
+        <div class="lang-switch" role="group" data-i18n-aria="aria.lang" aria-label="Langue">
+          <button type="button" data-lang="fr" lang="fr">FR</button>
+          <button type="button" data-lang="ar" lang="ar">ع</button>
+          <button type="button" data-lang="en" lang="en">EN</button>
+        </div>
+        <button class="icon-btn" id="themeToggle" data-i18n-aria="aria.theme" aria-label="Changer de thème">
           <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         </button>
-        <button class="icon-btn nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <button class="icon-btn nav__burger" id="burger" data-i18n-aria="aria.menu" aria-label="Ouvrir le menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -44,18 +49,18 @@
       <div class="hero__glow"></div>
       <div class="container hero__inner">
         <div class="hero__text reveal">
-          <p class="hero__badge"><span class="dot"></span> Disponible pour un stage</p>
-          <h1>Bonjour, je suis<br /><span class="gradient">ISSA AHMAT ISSA</span></h1>
-          <p class="hero__role">Étudiant en <strong>Génie Informatique</strong> — <span id="typed" class="mono"></span><span class="caret">|</span></p>
-          <p class="hero__desc">
+          <p class="hero__badge"><span class="dot"></span> <span data-i18n="hero.badge">Disponible pour un stage</span></p>
+          <h1><span data-i18n="hero.hello">Bonjour, je suis</span><br /><span class="gradient">ISSA AHMAT ISSA</span></h1>
+          <p class="hero__role"><span data-i18n="hero.role">Étudiant en <strong>Génie Informatique</strong> —</span> <span id="typed" class="mono"></span><span class="caret">|</span></p>
+          <p class="hero__desc" data-i18n="hero.desc">
             En 3<sup>e</sup> année de licence à l'Institut National des Sciences et Techniques d'Abéché (Tchad),
             je conçois des applications web, programme en C et Python et j'aime résoudre des problèmes techniques en équipe.
           </p>
           <div class="hero__cta">
-            <a href="#contact" class="btn btn--primary">Me contacter</a>
+            <a href="#contact" class="btn btn--primary" data-i18n="hero.contact">Me contacter</a>
             <a href="assets/CV-Issa-Ahmat-Issa.pdf" class="btn btn--ghost" download>
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
-              Télécharger mon CV
+              <span data-i18n="hero.cv">Télécharger mon CV</span>
             </a>
           </div>
           <div class="hero__social">
@@ -74,18 +79,18 @@
         <div class="hero__visual reveal">
           <figure class="portrait">
             <div class="portrait__frame">
-              <img src="assets/photo.jpg" alt="Portrait de ISSA AHMAT ISSA" width="640" height="800" />
+              <img src="assets/photo.jpg" data-i18n-alt="hero.photoAlt" alt="Portrait de ISSA AHMAT ISSA" width="640" height="800" />
             </div>
             <figcaption class="portrait__tag">
               <span class="dot"></span>
-              <span><strong>ISSA AHMAT ISSA</strong><small>Licence 3 · Génie Informatique</small></span>
+              <span><strong>ISSA AHMAT ISSA</strong><small data-i18n="hero.level">Licence 3 · Génie Informatique</small></span>
             </figcaption>
             <span class="portrait__chip portrait__chip--top mono">&lt;C / Python&gt;</span>
-            <span class="portrait__chip portrait__chip--side mono">INST · Abéché</span>
+            <span class="portrait__chip portrait__chip--side mono" data-i18n="hero.school">INST · Abéché</span>
           </figure>
         </div>
       </div>
-      <a href="#apropos" class="hero__scroll" aria-label="Défiler vers le bas"><span></span></a>
+      <a href="#apropos" class="hero__scroll" data-i18n-aria="aria.scroll" aria-label="Défiler vers le bas"><span></span></a>
     </section>
 
     <!-- ========== À PROPOS ========== -->
@@ -93,32 +98,32 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag mono">01.</span>
-          <h2>À propos de moi</h2>
+          <h2 data-i18n="about.title">À propos de moi</h2>
         </div>
         <div class="about">
           <div class="about__text reveal">
-            <p>
+            <p data-i18n="about.p1">
               Je m'appelle <strong>ISSA AHMAT ISSA</strong>, étudiant tchadien originaire de N'Djamena, actuellement en
               <strong>3<sup>e</sup> année de licence en Génie Informatique</strong> à l'Institut National des Sciences et
               Techniques d'Abéché.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Passionné par la technologie, j'ai développé des compétences variées : programmation en
               <strong>C</strong> et <strong>Python</strong>, développement web (<strong>HTML, CSS, JavaScript</strong>),
               bases de données <strong>MySQL</strong>, systèmes <strong>Windows et Linux</strong>, ainsi que la
               programmation mobile et la maintenance des ordinateurs.
             </p>
-            <p>
+            <p data-i18n="about.p3">
               J'aime travailler en équipe pour résoudre des problèmes techniques concrets. Trilingue
               (français, arabe, anglais), je m'adapte facilement à des environnements variés et je suis à la recherche
               d'un <strong>stage</strong> pour mettre mes compétences au service de projets réels.
             </p>
           </div>
           <div class="about__stats reveal">
-            <div class="stat"><span class="stat__num">L3</span><span class="stat__label">Licence Génie Informatique</span></div>
-            <div class="stat"><span class="stat__num">3</span><span class="stat__label">Langues parlées</span></div>
-            <div class="stat"><span class="stat__num">4+</span><span class="stat__label">Langages &amp; technologies</span></div>
-            <div class="stat"><span class="stat__num">Tchad</span><span class="stat__label">Abéché · N’Djamena</span></div>
+            <div class="stat"><span class="stat__num">L3</span><span class="stat__label" data-i18n="about.stat1">Licence Génie Informatique</span></div>
+            <div class="stat"><span class="stat__num">3</span><span class="stat__label" data-i18n="about.stat2">Langues parlées</span></div>
+            <div class="stat"><span class="stat__num">4+</span><span class="stat__label" data-i18n="about.stat3">Langages &amp; technologies</span></div>
+            <div class="stat"><span class="stat__num" data-i18n="about.stat4num">Tchad</span><span class="stat__label" data-i18n="about.stat4">Abéché · N’Djamena</span></div>
           </div>
         </div>
       </div>
@@ -129,71 +134,71 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag mono">02.</span>
-          <h2>Compétences</h2>
+          <h2 data-i18n="skills.title">Compétences</h2>
         </div>
         <div class="skills">
           <article class="skill-card reveal">
             <div class="skill-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></div>
-            <h3>Programmation</h3>
-            <p>Algorithmique et résolution de problèmes avec des langages compilés et interprétés.</p>
+            <h3 data-i18n="skills.s1t">Programmation</h3>
+            <p data-i18n="skills.s1d">Algorithmique et résolution de problèmes avec des langages compilés et interprétés.</p>
             <ul class="tags"><li>C</li><li>Python</li><li>Django</li></ul>
           </article>
           <article class="skill-card reveal">
             <div class="skill-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
-            <h3>Développement web</h3>
-            <p>Création de pages et interfaces web modernes, responsives et interactives.</p>
+            <h3 data-i18n="skills.s2t">Développement web</h3>
+            <p data-i18n="skills.s2d">Création de pages et interfaces web modernes, responsives et interactives.</p>
             <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
           </article>
           <article class="skill-card reveal">
             <div class="skill-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
-            <h3>Bases de données</h3>
-            <p>Conception de schémas relationnels et écriture de requêtes SQL.</p>
+            <h3 data-i18n="skills.s3t">Bases de données</h3>
+            <p data-i18n="skills.s3d">Conception de schémas relationnels et écriture de requêtes SQL.</p>
             <ul class="tags"><li>MySQL</li><li>SQL</li></ul>
           </article>
           <article class="skill-card reveal">
             <div class="skill-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
-            <h3>Développement mobile</h3>
-            <p>Programmation d'applications pour appareils mobiles.</p>
-            <ul class="tags"><li>Mobile</li><li>Applications</li></ul>
+            <h3 data-i18n="skills.s4t">Développement mobile</h3>
+            <p data-i18n="skills.s4d">Programmation d'applications pour appareils mobiles.</p>
+            <ul class="tags"><li data-i18n="skills.tagMobile">Mobile</li><li data-i18n="skills.tagApps">Applications</li></ul>
           </article>
           <article class="skill-card reveal">
             <div class="skill-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h6"/></svg></div>
-            <h3>Systèmes d'exploitation</h3>
-            <p>Installation, configuration et utilisation au quotidien des environnements desktop.</p>
+            <h3 data-i18n="skills.s5t">Systèmes d'exploitation</h3>
+            <p data-i18n="skills.s5d">Installation, configuration et utilisation au quotidien des environnements desktop.</p>
             <ul class="tags"><li>Linux</li><li>Windows</li></ul>
           </article>
           <article class="skill-card reveal">
             <div class="skill-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
-            <h3>Maintenance informatique</h3>
-            <p>Diagnostic, dépannage et entretien matériel et logiciel des ordinateurs.</p>
-            <ul class="tags"><li>Dépannage</li><li>Hardware</li><li>Bureautique</li></ul>
+            <h3 data-i18n="skills.s6t">Maintenance informatique</h3>
+            <p data-i18n="skills.s6d">Diagnostic, dépannage et entretien matériel et logiciel des ordinateurs.</p>
+            <ul class="tags"><li data-i18n="skills.tagRepair">Dépannage</li><li data-i18n="skills.tagHw">Hardware</li><li data-i18n="skills.tagOffice">Bureautique</li></ul>
           </article>
         </div>
 
         <div class="soft reveal">
-          <h3>Savoir-être</h3>
+          <h3 data-i18n="soft.title">Savoir-être</h3>
           <ul class="tags tags--lg">
-            <li>Travail en équipe</li>
-            <li>Résolution de problèmes</li>
-            <li>Curiosité &amp; autonomie</li>
-            <li>Adaptabilité</li>
-            <li>Esprit d'analyse</li>
+            <li data-i18n="soft.1">Travail en équipe</li>
+            <li data-i18n="soft.2">Résolution de problèmes</li>
+            <li data-i18n="soft.3">Curiosité &amp; autonomie</li>
+            <li data-i18n="soft.4">Adaptabilité</li>
+            <li data-i18n="soft.5">Esprit d'analyse</li>
           </ul>
         </div>
 
         <div class="langs reveal">
-          <h3>Langues</h3>
+          <h3 data-i18n="langs.title">Langues</h3>
           <div class="langs__grid">
             <div class="lang">
-              <div class="lang__top"><span>Français</span><span class="lang__lvl">Avancé</span></div>
+              <div class="lang__top"><span data-i18n="langs.fr">Français</span><span class="lang__lvl" data-i18n="langs.adv">Avancé</span></div>
               <div class="bar"><span style="--w: 90%"></span></div>
             </div>
             <div class="lang">
-              <div class="lang__top"><span>Arabe</span><span class="lang__lvl">Avancé</span></div>
+              <div class="lang__top"><span data-i18n="langs.ar">Arabe</span><span class="lang__lvl" data-i18n="langs.adv">Avancé</span></div>
               <div class="bar"><span style="--w: 90%"></span></div>
             </div>
             <div class="lang">
-              <div class="lang__top"><span>Anglais</span><span class="lang__lvl">Intermédiaire</span></div>
+              <div class="lang__top"><span data-i18n="langs.en">Anglais</span><span class="lang__lvl" data-i18n="langs.mid">Intermédiaire</span></div>
               <div class="bar"><span style="--w: 60%"></span></div>
             </div>
           </div>
@@ -206,51 +211,51 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag mono">03.</span>
-          <h2>Parcours académique</h2>
+          <h2 data-i18n="edu.title">Parcours académique</h2>
         </div>
         <ol class="timeline">
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2025 — 2026</span>
-            <h3>Licence 3 — Génie Informatique <span class="pill">En cours</span></h3>
-            <p class="timeline__place">Institut National des Sciences et Techniques d'Abéché</p>
+            <h3><span data-i18n="edu.l3">Licence 3 — Génie Informatique</span> <span class="pill" data-i18n="edu.current">En cours</span></h3>
+            <p class="timeline__place" data-i18n="edu.inst">Institut National des Sciences et Techniques d'Abéché</p>
           </li>
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2024 — 2025</span>
-            <h3>Licence 2 — Génie Informatique</h3>
-            <p class="timeline__place">Institut National des Sciences et Techniques d'Abéché</p>
+            <h3 data-i18n="edu.l2">Licence 2 — Génie Informatique</h3>
+            <p class="timeline__place" data-i18n="edu.inst">Institut National des Sciences et Techniques d'Abéché</p>
           </li>
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2023 — 2024</span>
-            <h3>Licence 1 — Génie Informatique</h3>
-            <p class="timeline__place">Institut National des Sciences et Techniques d'Abéché</p>
+            <h3 data-i18n="edu.l1">Licence 1 — Génie Informatique</h3>
+            <p class="timeline__place" data-i18n="edu.inst">Institut National des Sciences et Techniques d'Abéché</p>
           </li>
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2021 — 2022</span>
-            <h3>Baccalauréat — Série Scientifique (D)</h3>
-            <p class="timeline__place">Lycée Hamid Djongo</p>
+            <h3 data-i18n="edu.bac">Baccalauréat — Série Scientifique (D)</h3>
+            <p class="timeline__place" data-i18n="edu.lycee">Lycée Hamid Djongo</p>
           </li>
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2018 — 2019</span>
-            <h3>Brevet d'Études Fondamentales (BEF)</h3>
-            <p class="timeline__place">Complexe Scolaire Privé Bilingue Soleil d'Afrique</p>
+            <h3 data-i18n="edu.bef">Brevet d'Études Fondamentales (BEF)</h3>
+            <p class="timeline__place" data-i18n="edu.soleil">Complexe Scolaire Privé Bilingue Soleil d'Afrique</p>
           </li>
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2015 — 2018</span>
-            <h3>Cycle secondaire</h3>
-            <p class="timeline__place">Complexe Scolaire Privé Bilingue Soleil d'Afrique</p>
+            <h3 data-i18n="edu.secondary">Cycle secondaire</h3>
+            <p class="timeline__place" data-i18n="edu.soleil">Complexe Scolaire Privé Bilingue Soleil d'Afrique</p>
           </li>
           <li class="timeline__item reveal">
             <span class="timeline__date mono">2009 — 2013</span>
-            <h3>École primaire</h3>
-            <p class="timeline__place">Complexe Scolaire Privé Bilingue Ambassadeur</p>
+            <h3 data-i18n="edu.primary">École primaire</h3>
+            <p class="timeline__place" data-i18n="edu.ambassadeur">Complexe Scolaire Privé Bilingue Ambassadeur</p>
           </li>
         </ol>
 
         <div class="certs reveal">
-          <h3>Formations complémentaires</h3>
+          <h3 data-i18n="certs.title">Formations complémentaires</h3>
           <div class="certs__grid">
-            <div class="cert"><span class="cert__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h8M8 3v2M6 5c0 4 2.5 7 6 8M10 5c0 4-3 7-6 8M13 21l4-10 4 10M14.5 17h5"/></svg></span><div><strong>Langue anglaise</strong><small>Formation en anglais</small></div></div>
-            <div class="cert"><span class="cert__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div><strong>Informatique bureautique</strong><small>Word, Excel, PowerPoint</small></div></div>
+            <div class="cert"><span class="cert__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h8M8 3v2M6 5c0 4 2.5 7 6 8M10 5c0 4-3 7-6 8M13 21l4-10 4 10M14.5 17h5"/></svg></span><div><strong data-i18n="certs.c1">Langue anglaise</strong><small data-i18n="certs.c1s">Formation en anglais</small></div></div>
+            <div class="cert"><span class="cert__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div><strong data-i18n="certs.c2">Informatique bureautique</strong><small>Word, Excel, PowerPoint</small></div></div>
           </div>
         </div>
       </div>
@@ -261,9 +266,9 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag mono">04.</span>
-          <h2>Projets</h2>
+          <h2 data-i18n="projects.title">Projets</h2>
         </div>
-        <p class="section__intro reveal">
+        <p class="section__intro reveal" data-i18n="projects.intro">
           Une sélection de mes réalisations. Retrouvez l'ensemble de mon code sur GitHub.
         </p>
         <!-- Les cartes sont générées depuis la liste PROJECTS dans script.js : ajoutez-y vos projets. -->
@@ -276,47 +281,54 @@
       <div class="container">
         <div class="section__head reveal">
           <span class="section__tag mono">05.</span>
-          <h2>Contact</h2>
+          <h2 data-i18n="contact.title">Contact</h2>
         </div>
         <div class="contact">
           <div class="contact__info reveal">
-            <p class="contact__lead">
+            <p class="contact__lead" data-i18n="contact.lead">
               Vous avez une offre de stage, un projet ou une simple question ?
               N'hésitez pas à me contacter, je vous répondrai rapidement.
             </p>
             <a class="contact__item" href="mailto:issaahmatissa0@gmail.com">
               <span class="contact__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
-              <div><small>Email</small><strong>issaahmatissa0@gmail.com</strong></div>
+              <div><small data-i18n="contact.email">Email</small><strong dir="ltr" id="emailText">issaahmatissa0@gmail.com</strong></div>
             </a>
+            <button type="button" class="copy-btn" id="copyEmail" data-i18n="contact.copy">Copier l'adresse email</button>
             <a class="contact__item" href="tel:+23566026336">
               <span class="contact__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
-              <div><small>Téléphone</small><strong>(+235) 66 02 63 36</strong></div>
+              <div><small data-i18n="contact.phone">Téléphone</small><strong dir="ltr">(+235) 66 02 63 36</strong></div>
             </a>
             <div class="contact__item">
               <span class="contact__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <div><small>Localisation</small><strong>Abéché / N'Djamena, Tchad</strong></div>
+              <div><small data-i18n="contact.location">Localisation</small><strong data-i18n="contact.locationVal">Abéché / N'Djamena, Tchad</strong></div>
             </div>
+            <a class="contact__item" href="https://wa.me/23566026336" target="_blank" rel="noopener">
+              <span class="contact__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></span>
+              <div><small>WhatsApp</small><strong data-i18n="contact.whatsapp">Écrire sur WhatsApp</strong></div>
+            </a>
           </div>
 
           <form class="contact__form reveal" id="contactForm">
             <div class="field">
-              <label for="name">Nom</label>
-              <input id="name" name="name" type="text" placeholder="Votre nom" required />
+              <label for="name" data-i18n="form.name">Nom</label>
+              <input id="name" name="name" type="text" data-i18n-ph="form.namePh" placeholder="Votre nom" required />
             </div>
             <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="vous@exemple.com" required />
+              <label for="email" data-i18n="form.email">Email</label>
+              <input id="email" name="email" type="email" data-i18n-ph="form.emailPh" placeholder="vous@exemple.com" required />
             </div>
             <div class="field">
-              <label for="subject">Sujet</label>
-              <input id="subject" name="subject" type="text" placeholder="Proposition de stage" />
+              <label for="subject" data-i18n="form.subject">Sujet</label>
+              <input id="subject" name="subject" type="text" data-i18n-ph="form.subjectPh" placeholder="Proposition de stage" />
             </div>
             <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Votre message…" required></textarea>
+              <label for="message" data-i18n="form.message">Message</label>
+              <textarea id="message" name="message" rows="5" data-i18n-ph="form.messagePh" placeholder="Votre message…" required></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Envoyer le message</button>
-            <p class="form__note">Le bouton ouvre votre application email avec le message pré-rempli.</p>
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button type="submit" class="btn btn--primary btn--full" id="sendBtn" data-i18n="form.send">Envoyer le message</button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite" hidden></p>
+            <p class="form__note" data-i18n="form.note">Votre message m'arrive directement par email.</p>
           </form>
         </div>
       </div>
@@ -325,13 +337,14 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> ISSA AHMAT ISSA — Conçu et développé avec HTML, CSS &amp; JavaScript.</p>
-      <p class="footer__hobbies">Loisirs : football, sport, musique, voyage</p>
+      <p>© <span id="year"></span> ISSA AHMAT ISSA. <span data-i18n="footer.made">Conçu et développé avec HTML, CSS &amp; JavaScript.</span></p>
+      <p class="footer__hobbies" data-i18n="footer.hobbies">Loisirs : football, sport, musique, voyage</p>
     </div>
   </footer>
 
-  <a href="#accueil" class="to-top" id="toTop" aria-label="Retour en haut">↑</a>
+  <a href="#accueil" class="to-top" id="toTop" data-i18n-aria="aria.top" aria-label="Retour en haut">↑</a>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
